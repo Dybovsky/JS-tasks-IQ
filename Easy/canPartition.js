@@ -13,8 +13,20 @@ The array may contain duplicates.
 Multiple solutions can exist, any solution is sufficient to return true.
 */
 
-function canPartition( /*args*/ ) {
-  //your code
+function canPartition(myarr /*args*/) {
+  let summ = 1;
+  for (let i = 0; i < myarr.length; i++) {
+    summ *= myarr[i];
+  }
+
+  console.log(summ);
+  for (let i = 0; i < myarr.length; i++) {
+    if (myarr[i] == summ / myarr[i]) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 exports.solution = canPartition;

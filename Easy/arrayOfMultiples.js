@@ -11,7 +11,12 @@ Notes
 Notice that num is also included in the returned array.
 */
 
-function arrayOfMultiples(/*args*/) {
+function arrayOfMultiples(num, arraySize) {
+  let result = [];
+  for (let i = 0; i < arraySize; i++) {
+    result[i] = num * (i + 1);
+  }
+  return result;
   //your code
 }
 
