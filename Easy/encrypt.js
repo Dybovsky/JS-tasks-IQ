@@ -30,8 +30,38 @@ Notes
 All inputs are strings, no uppercases and all output must be strings.
 */
 
-function encrypt( /*args*/ ) {
-  //your code
+function encrypt(str /*args*/) {
+  let res = [];
+  let myStr = str.split("").reverse();
+  for (let i = 0; i < myStr.length; i++) {
+    switch (myStr[i]) {
+      case "a":
+        res.splice(i, 1, "0");
+
+        break;
+      case "e":
+        res.splice(i, 1, "1");
+
+        break;
+      case "i":
+        res.splice(i, 1, "2");
+
+        break;
+      case "o":
+        res.splice(i, 1, "2");
+
+        break;
+      case "u":
+        res.splice(i, 1, "3");
+
+        break;
+
+      default:
+        res.splice(i, 1, myStr[i]);
+    }
+  }
+
+  return res.join("") + "aca"; //your code
 }
 
 exports.solution = encrypt;

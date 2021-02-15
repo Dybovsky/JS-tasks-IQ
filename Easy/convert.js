@@ -13,8 +13,10 @@ If you get stuck on a challenge, find help in the Resources tab.
 If you're really stuck, unlock solutions in the Solutions tab.
 */
 
-function convert(/*args*/) {
-  //your code
+function convert(h, min /*args*/) {
+  let res = 0;
+  res = h * 60 * 60 + min * 60;
+  return res; //your code
 }
 
 exports.solution = convert;
