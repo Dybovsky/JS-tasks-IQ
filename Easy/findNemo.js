@@ -24,7 +24,8 @@ function findNemo(string /*args*/) {
       return `I found Nemo at ${myArr.indexOf(myArr[i]) + 1}!`; //your code
     }
   }
-  return "I can't find Nemo :(";
+  ret
+  urn "I can't find Nemo :(";
 }
 
 // function findNemo(string /*args*/) {

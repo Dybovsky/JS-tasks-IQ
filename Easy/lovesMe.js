@@ -13,9 +13,23 @@ Notes
 Remember to return a string.
 The first phrase is always "Loves me".
 */
-
-function lovesMe( /*args*/ ) {
-  //your code
+function lovesMe(petals) {
+  let loveMe = "Loves me";
+  let not = "Loves me not";
+  let answer = "";
+  for (let i = 0; i <= petals; i++) {
+    if (i % 2 === 0) {
+      if (i + 1 === petals) {
+        return answer + loveMe.toUpperCase();
+      }
+      answer = answer + loveMe + ", ";
+    } else {
+      if (i + 1 === petals) {
+        return answer + not.toUpperCase();
+      }
+      answer = answer + not + ", ";
+    }
+  }
 }
 
 exports.solution = lovesMe;

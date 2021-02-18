@@ -40,8 +40,11 @@ Notes
 There might be a floating point precision problem in here...
 */
 
-function getTotalPrice( /*args*/ ) {
-  //your code
+function getTotalPrice(purchases /*args*/) {
+  let total = 0;
+  purchases.forEach((element) => {
+    total += (element.price * element.quantity) / 10;
+  }); //your code
+  return total * 10;
 }
-
 exports.solution = getTotalPrice;
