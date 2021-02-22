@@ -35,8 +35,21 @@ champions([
 ➞ "Manchester United"
 */
 
-function champions( /*args*/ ) {
+function champions(arrOfTeams /*args*/) {
+  arrOfTeams.forEach((team) => {
+    for (let i in team) {
+      team["total"] = team["wins"] * 3 + 0 * team["loss"] + 1 * team["draws"];
+      team["difference"] = team["scored"] - team["conceded"];
+    }
+    arrOfTeams.sort((prev, next) => next.total - prev.total);
+    if (arrOfTeams[0].total === arrOfTeams[1].total) {
+      arrOfTeams.sort((prev, next) => next.difference - prev.difference);
+      console.log(arrOfTeams);
+      return arrOfTeams[0].name;
+    }
+  });
   //your code
+  return arrOfTeams[0].name;
 }
 
 exports.solution = champions;

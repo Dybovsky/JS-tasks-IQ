@@ -9,8 +9,8 @@ radiansToDegrees(20) ➞ 1145.9155902616465
 radiansToDegrees(50) ➞ 2864.7889756541163
 */
 
-function radiansToDegrees(/*args*/) {
-  //your code
+function radiansToDegrees(radian /*args*/) {
+  return (radian * 180) / 3.14159265358979323846; //your code
 }
 
 exports.solution = radiansToDegrees;
