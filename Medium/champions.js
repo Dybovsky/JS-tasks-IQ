@@ -41,6 +41,7 @@ function champions(arrOfTeams /*args*/) {
       team["total"] = team["wins"] * 3 + 0 * team["loss"] + 1 * team["draws"];
       team["difference"] = team["scored"] - team["conceded"];
     }
+
     arrOfTeams.sort((prev, next) => next.total - prev.total);
     if (arrOfTeams[0].total === arrOfTeams[1].total) {
       arrOfTeams.sort((prev, next) => next.difference - prev.difference);
