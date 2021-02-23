@@ -43,8 +43,33 @@ The today parameter will always be greater than or equal to the last date in the
 An empty array should return 0.
 */
 
-function currentStreak( /*args*/ ) {
-  //your code
+function currentStreak(today, datesArray /*args*/) {
+  let newArr = [];
+  let count = 0;
+
+  if (datesArray.length === 0) {
+    return 0;
+  }
+
+  for (let item of datesArray) {
+    for (let date in item) {
+      newArr.push(+item.date.replace(/[\s-%]/g, ""));
+    }
+  }
+
+  newArr = newArr.reverse();
+  let numToday = +today.replace(/[\s-%]/g, "");
+
+  for (let i = 0; i < newArr.length; i++) {
+    if (numToday === newArr[i] + 1) {
+      numToday = newArr[i];
+      count++;
+    }
+  }
+
+  // let ex = '2019-09-12'
+  // let res = ex.replace(/[\s-%]/g, '')
+  return count + 1;
 }
 
 exports.solution = currentStreak;

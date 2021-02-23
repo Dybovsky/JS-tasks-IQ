@@ -12,8 +12,16 @@ Round to the nearest integer.
 If the input is incorrect, return "Error".
 */
 
-function convertTemp( /*args*/ ) {
-  //your code
+function convertTemp(param /*args*/) {
+  if (param.includes("C")) {
+    let num = +param.slice(0, param.length - 2);
+    //console.log(param1)
+    return `${Math.round((num * 9) / 5 + 32)}°F`;
+  } else if (param.includes("F")) {
+    let num = +param.slice(0, param.length - 2);
+    return `${Math.round(((num - 32) * 5) / 9)}°C`;
+  }
+  return "Error"; //your code
 }
 
-exports.solution = convert;
+exports.solution = convertTemp;
