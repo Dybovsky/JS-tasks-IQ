@@ -15,7 +15,12 @@ getBudgets([
 ]) ➞ 62600
 */
 
-function getBudgets( /*args*/ ) {
+function getBudgets(lads /*args*/) {
+  let total = 0;
+  for (let i = 0; i < lads.length; i++) {
+    total += lads[i].budget;
+  }
+  return total;
   //your code
 }
 

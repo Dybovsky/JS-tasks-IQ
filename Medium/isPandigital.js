@@ -10,8 +10,20 @@ isPandigital(90864523148909) ➞ false
 isPandigital(112233445566778899) ➞ false
 */
 
-function isPandigital( /*args*/ ) {
-  //your code
+function isPandigital(number /*args*/) {
+  let arr = String(number).split("");
+  console.log(arr);
+  //let nums = ['0','1','2','3','4','5','6','7','8','9']; //your code
+  let nums = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!nums.includes(arr[i])) {
+      nums.push(arr[i]);
+    }
+    if (nums.length === 10) {
+      return true;
+    }
+  }
+  return false;
 }
 
 exports.solution = isPandigital;
