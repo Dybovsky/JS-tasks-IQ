@@ -14,7 +14,15 @@ The strings can contain white spaces or any type of characters.
 Bonus: Try solving this without regex.
 */
 
-function numInStr( /*args*/ ) {
+function numInStr(strings) {
+  const regex = /\d+/g;
+  const res = [];
+  for (let item of strings) {
+    if (item.match(regex)) {
+      res.push(item);
+    }
+  }
+  return res;
   //your code
 }
 

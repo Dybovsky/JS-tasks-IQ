@@ -33,3 +33,18 @@ function lovesMe(petals) {
 }
 
 exports.solution = lovesMe;
+
+// function lovesMe( petals ) {
+//   //your code
+//   let loveStr =[];
+//   for(let i=0; i<petals; i++){
+//     if(i%2==0){
+//       loveStr[i] = "Loves me";
+//     }
+//     else{
+//       loveStr[i] = "Loves me not"
+//     }
+//   }
+//   loveStr[loveStr.length -1] = loveStr[loveStr.length-1].toUpperCase();
+//    return loveStr.join(', ');
+// }

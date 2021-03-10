@@ -13,8 +13,14 @@ Notes
 There is exactly one space between each word and no punctuation is used.
 */
 
-function reverseOdd( /*args*/ ) {
-  //your code
+function reverseOdd(word) {
+  let myArr = word.split(" ");
+  for (let i = 0; i < myArr.length; i++) {
+    if (myArr[i].length % 2 !== 0) {
+      myArr[i] = myArr[i].split("").reverse().join("");
+    }
+  }
+  return myArr.join(" ");
 }
 
 exports.solution = reverseOdd;

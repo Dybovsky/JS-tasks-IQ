@@ -10,20 +10,30 @@ isPandigital(90864523148909) ➞ false
 isPandigital(112233445566778899) ➞ false
 */
 
-function isPandigital(number /*args*/) {
-  let arr = String(number).split("");
-  console.log(arr);
-  //let nums = ['0','1','2','3','4','5','6','7','8','9']; //your code
-  let nums = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (!nums.includes(arr[i])) {
-      nums.push(arr[i]);
-    }
-    if (nums.length === 10) {
-      return true;
-    }
+function isPandigital(number) {
+  const strNumber = number + "";
+  if (strNumber.length < 10) return false;
+  const lookedValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  const foundValues = {};
+
+  for (let i = 0; i < strNumber.length; ++i) {
+    const character = strNumber[i];
+    if (!foundValues[character]) foundValues[character] = true;
   }
-  return false;
+  for (let el of lookedValues) {
+    if (!foundValues[el]) return false;
+  }
+  return true;
 }
+// // make an arr from input
+// const arr = String(number).split("");
+
+// const nums = [];
+// for (let i = 0; i < arr.length; i++) {
+//   // if this number not  in empty arr
+//   if (!nums.includes(arr[i])) nums.push(arr[i]);
+//   if (nums.length === 10) return true;
+// }
+// return false;
 
 exports.solution = isPandigital;

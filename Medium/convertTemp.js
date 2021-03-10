@@ -13,12 +13,11 @@ If the input is incorrect, return "Error".
 */
 
 function convertTemp(param /*args*/) {
+  //  convert param in number
+  let num = +param.slice(0, param.length - 2);
   if (param.includes("C")) {
-    let num = +param.slice(0, param.length - 2);
-    //console.log(param1)
     return `${Math.round((num * 9) / 5 + 32)}°F`;
   } else if (param.includes("F")) {
-    let num = +param.slice(0, param.length - 2);
     return `${Math.round(((num - 32) * 5) / 9)}°C`;
   }
   return "Error"; //your code

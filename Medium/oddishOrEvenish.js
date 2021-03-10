@@ -11,8 +11,13 @@ oddishOrEvenish(373) ➞ "Oddish"
 oddishOrEvenish(4433) ➞ "Evenish"
 */
 
-function oddishOrEvenish( /*args*/ ) {
-  //your code
+function oddishOrEvenish(num) {
+  let arr = num.toString().split("");
+  let sum = arr.reduce((res, e) => res + +e, 0);
+  if (sum % 2 !== 0) {
+    return "Oddish";
+  } else {
+    return "Evenish";
+  }
 }
-
 exports.solution = oddishOrEvenish;

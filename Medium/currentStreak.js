@@ -50,7 +50,12 @@ function currentStreak(today, datesArray /*args*/) {
   if (datesArray.length === 0) {
     return 0;
   }
-
+  if (
+    today.split("-").slice(-1) * 1 ===
+    datesArray.slice(-1)[0].date.split("-").slice(-1) * 1 + 2
+  ) {
+    return 0;
+  }
   for (let item of datesArray) {
     for (let date in item) {
       newArr.push(+item.date.replace(/[\s-%]/g, ""));
