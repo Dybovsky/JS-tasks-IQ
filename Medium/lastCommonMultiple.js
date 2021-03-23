@@ -21,7 +21,8 @@ The LCM is the smallest integer that divides both numbers such that the remainde
 // return a * b;
 
 function lastCommonMultiple(a, b) {
-  let min = a > b ? a : b;
+  let min = Math.min(a, b);
+  //let min = a > b ? a : b;
   while (true) {
     if (min % a === 0 && min % b === 0) {
       return min;

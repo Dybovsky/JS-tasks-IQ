@@ -13,8 +13,9 @@ Notes
 Both characters will show up at least once in the string.
 */
 
-function doubleSwap( /*args*/ ) {
-  //your code
+function doubleSwap( string, repl1, repl2) {
+  let temp = str.replace(repl1, repl2)
+  let res = temp.replace(repl2, repl1)
+  return res;
 }
-
 exports.solution = doubleSwap;

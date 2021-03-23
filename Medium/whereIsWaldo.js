@@ -25,7 +25,13 @@ Notes
 Rows and columns are 0-indexed.
 */
 
-function whereIsWaldo(/*args*/) {
+function whereIsWaldo(matrix) {
+  for(let i = 0; i < matrix.length; i++){
+    let line = matrix[i];
+    for(let j = 0; j< line.length; j++){
+      if()
+    }
+  }
   //your code
 }
 

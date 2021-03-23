@@ -2,7 +2,7 @@
 Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.
 
 Examples
-numInStr(["1a", "a", "2b", "b"]) ➞ ["1a", "2b"]
+numInStr(["1a", "a", ""2b, "b"]) ➞ ["1a", "2b"]
 
 numInStr(["abc", "abc10"]) ➞ ["abc10"]
 
@@ -15,10 +15,10 @@ Bonus: Try solving this without regex.
 */
 
 function numInStr(strings) {
-  const regex = /\d+/g;
+  const regex1 = /\d+/g;
   const res = [];
   for (let item of strings) {
-    if (item.match(regex)) {
+    if (item.match(regex1)) {
       res.push(item);
     }
   }

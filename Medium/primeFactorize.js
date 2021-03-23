@@ -15,7 +15,7 @@ The only positive integer which is neither prime nor composite is 1. Return an e
 function primeFactorize(num) {
   let res = [];
   let i = 2;
-  while (num !== 0) {
+  while (i <= num) {
     if (num % i === 0) {
       res.push(i);
       num = num / i;

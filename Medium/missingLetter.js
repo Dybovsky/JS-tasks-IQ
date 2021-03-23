@@ -16,16 +16,29 @@ Notes
 The given string will never have more than one missing letter.
 */
 
-function missingLetter(string) {
-  let myArr = [];
+// function missingLetter(string) {
+//   let myArr = [];
 
-  for (let i = 0; i < string.length; ++i) {
-    myArr.push(string.charCodeAt(i));
-  }
+//   for (let i = 0; i < string.length; ++i) {
+//     myArr.push(string.charCodeAt(i));
+//   }
 
-  for (let i = 0; i < myArr.length; i++) {
-    if (myArr[i] !== myArr[i + 1] - 1 && myArr[i + 1] !== myArr[-1]) {
-      return `${String.fromCharCode(myArr[i] + 1)}`;
+//   for (let i = 0; i < myArr.length; i++) {
+//     if (myArr[i] !== myArr[i + 1] - 1 && myArr[i + 1] !== myArr[-1]) {
+//       return `${String.fromCharCode(myArr[i] + 1)}`;
+//     }
+//   }
+//   return "No Missing Letter";
+// }
+
+function missingLetter(str) {
+  //your code
+
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let indexOfAlpha = alphabet.indexOf(str[0]);
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== alphabet[indexOfAlpha + i]) {
+      return alphabet[indexOfAlpha + i];
     }
   }
   return "No Missing Letter";
